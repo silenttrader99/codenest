@@ -30,7 +30,7 @@ export const createCellsRouter = (filename: string, dir: string) => {
     } catch (error) {
       if (isLocalApiError(error)) {
         if (error.code === "ENOENT") {
-          // create a dile and add default cells
+          // create a file and add default cells
           await fs.writeFile(fullPath, "[]", "utf-8");
           res.send([]);
         } else {
