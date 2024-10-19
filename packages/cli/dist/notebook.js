@@ -1,1 +1,1 @@
-[{"content":"","type":"code","id":"a6v"},{"content":"","type":"text","id":"kkd"}]
+[{"content":"show(<h1>Hi there</h1>);","type":"code","id":"9tf"},{"content":"# Hi there","type":"text","id":"ri4"},{"content":"console.log('hi there')","type":"code","id":"f82"}]

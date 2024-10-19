@@ -1,5 +1,5 @@
 import { Command } from "commander";
-import { serve } from "local-api";
+import { serve } from "@nestjsnote/local-api";
 import path from "path";
 
 interface LocalApiError {

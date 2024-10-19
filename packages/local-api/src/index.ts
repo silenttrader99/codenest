@@ -21,7 +21,9 @@ export const serve = (
       })
     );
   } else {
-    const packagePath = require.resolve("local-client/dist/index.html"); // figure out the file dir
+    const packagePath = require.resolve(
+      "@nestjsnote/local-client/dist/index.html"
+    ); // figure out the file dir
     app.use(express.static(path.dirname(packagePath)));
   }
 
