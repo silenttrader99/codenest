@@ -1,7 +1,13 @@
 {
   "name": "@nestjsnote/local-api",
   "version": "0.0.0",
-  "description": "Now I’m the model of a modern major general / The venerated Virginian veteran whose men are all / Lining up, to put me up on a pedestal / Writin’ letters to relatives / Embellishin’ my elegance and eloquence / But the elephant is in the room / The truth is in ya face when ya hear the British cannons go / BOOM",
+  "description": "",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
   "keywords": [],
   "author": "danish <danish25299@gmail.com>",
   "license": "ISC",
@@ -11,12 +17,10 @@
     "lib": "lib",
     "test": "__tests__"
   },
-  "files": [
-    "lib"
-  ],
   "scripts": {
     "start": "tsc --watch --preserveWatchOutput",
-    "test": "node ./__tests__/local-api.test.js"
+    "test": "node ./__tests__/local-api.test.js",
+    "prepublishOnly": "tsc"
   },
   "devDependencies": {
     "@types/cors": "^2.8.17",

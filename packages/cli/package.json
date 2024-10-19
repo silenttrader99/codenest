@@ -1,7 +1,14 @@
 {
   "name": "nestjsnote",
   "version": "0.0.0",
-  "description": "Now I’m the model of a modern major general / The venerated Virginian veteran whose men are all / Lining up, to put me up on a pedestal / Writin’ letters to relatives / Embellishin’ my elegance and eloquence / But the elephant is in the room / The truth is in ya face when ya hear the British cannons go / BOOM",
+  "description": "",
+  "publishConfig": {
+    "access": "public"
+  },
+  "bin": "dist/index.js",
+  "files": [
+    "dist"
+  ],
   "keywords": [],
   "author": "danish <danish25299@gmail.com>",
   "license": "ISC",
@@ -9,19 +16,19 @@
     "lib": "lib",
     "test": "__tests__"
   },
-  "files": [
-    "lib"
-  ],
   "scripts": {
     "start": "tsc --watch --preserveWatchOutput",
-    "test": "node ./__tests__/cli.test.js"
+    "test": "node ./__tests__/cli.test.js",
+    "prepublishOnly": "esbuild src/index.ts --platform=node --outfile=dist/index.js --bundle --minify --define:process.env.NODE_ENV=\\\"production\\\""
   },
   "dependencies": {
-    "commander": "^12.1.0",
-    "@nestjsnote/local-api": "file: ../local-api"
+    "@nestjsnote/local-client": "file: ../local-client"
   },
   "devDependencies": {
+    "@nestjsnote/local-api": "file: ../local-api",
     "@types/node": "^22.5.5",
+    "commander": "^12.1.0",
+    "esbuild": "^0.24.0",
     "typescript": "^5.6.2"
   }
 }
